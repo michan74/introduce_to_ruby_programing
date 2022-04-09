@@ -13,3 +13,5 @@ COPY . .
 
 CMD ["./fizz_buzz.rb"]
 
+
+# 参照：https://hub.docker.com/_/ruby
