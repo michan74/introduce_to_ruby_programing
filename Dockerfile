@@ -11,14 +11,14 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-CMD ["./fizz_buzz.rb"]
+CMD ["irb"]
 
 
 # 参照：https://hub.docker.com/_/ruby
 # スクリプト実行方法：
-# docker run -it --rm --name my-ruby-app -v "$PWD":/usr/src/myapp -w /usr/src/myapp ruby:3.0 ruby script/rgb.rb[実行したいファイル]
+# docker run -it --rm --name ruby -v "$PWD":/usr/src/myapp -w /usr/src/myapp ruby:3.0 ruby script/rgb.rb[実行したいファイル]
 # テスト実行；
-# docker run -it --rm --name my-ruby-app  -v "$PWD":/usr/src/myapp -w /usr/src/myapp ruby:3.0 ruby test/rgb_test.rb[実行したいファイル]
+# docker run -it --rm --name ruby  -v "$PWD":/usr/src/myapp -w /usr/src/myapp ruby:3.0 ruby test/rgb_test.rb[実行したいファイル]
 # docker run -it --rm --name ruby  -v "$PWD":/usr/src/myapp -w /usr/src/myapp ruby:3.0 ruby test/convert_length_test.rb
 
 # imageの確認
