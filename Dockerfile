@@ -24,4 +24,4 @@ CMD ["irb"]
 # imageの確認
 # docker images
 # docker起動して、irb開く
-# docker run --rm -it my-ruby-app irb
+# docker run --rm -it ruby irb
