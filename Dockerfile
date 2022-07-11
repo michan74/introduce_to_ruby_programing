@@ -20,8 +20,11 @@ CMD ["irb"]
 # テスト実行；
 # docker run -it --rm --name ruby  -v "$PWD":/usr/src/myapp -w /usr/src/myapp ruby:3.0 ruby test/rgb_test.rb[実行したいファイル]
 # docker run -it --rm --name ruby  -v "$PWD":/usr/src/myapp -w /usr/src/myapp ruby:3.0 ruby test/convert_length_test.rb
+# docker run -it --rm --name ruby  -v "$PWD":/usr/src/myapp -w /usr/src/myapp ruby:3.0 ruby test/convert_hash_syntax_test.rb
 
 # imageの確認
 # docker images
 # docker起動して、irb開く
-# docker run --rm -it ruby irb
+# docker run --rm -it ruby
+
+# (/(\d+)年(\d+)月(\d+)日/)
