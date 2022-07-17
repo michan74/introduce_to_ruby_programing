@@ -9,7 +9,7 @@ WORKDIR /usr/src/app
 # COPY Gemfile Gemfile.lock ./
 # RUN bundle install
 
-COPY . .
+COPY . /usr/src/myapp
 
 CMD ["irb"]
 
@@ -20,10 +20,12 @@ CMD ["irb"]
 # テスト実行；
 # docker run -it --rm --name ruby  -v "$PWD":/usr/src/myapp -w /usr/src/myapp ruby:3.0 ruby test/rgb_test.rb[実行したいファイル]
 # docker run -it --rm --name ruby  -v "$PWD":/usr/src/myapp -w /usr/src/myapp ruby:3.0 ruby test/convert_length_test.rb
-# docker run -it --rm --name ruby  -v "$PWD":/usr/src/myapp -w /usr/src/myapp ruby:3.0 ruby test/convert_hash_syntax_test.rb
+# docker run -it --rm --name ruby ruby /usr/src/myapp/test/convert_hash_syntax_test.rb
 
 # imageの確認
 # docker images
+# build
+# docker build -t ruby .
 # docker起動して、irb開く
 # docker run --rm -it ruby
 
