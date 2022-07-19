@@ -3,13 +3,17 @@ FROM ruby:3.0
 # throw errors if Gemfile has been modified since Gemfile.lock
 RUN bundle config --global frozen 1
 
-WORKDIR /usr/src/app
+# runした時にいるディレクトリを指定
+WORKDIR /myapp
 
 # gemfileになにも記載がないとbundle installでこけるので、一旦コメントアウト
 # COPY Gemfile Gemfile.lock ./
 # RUN bundle install
 
-COPY . /usr/src/myapp
+# COPY . /usr/src/myapp
+
+# マウント先を指定
+VOLUME /myapp
 
 CMD ["irb"]
 
