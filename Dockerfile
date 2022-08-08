@@ -23,7 +23,8 @@ CMD ["irb"]
 # docker run -it --rm --name ruby -v "$PWD":/usr/src/myapp -w /usr/src/myapp ruby:3.0 ruby script/rgb.rb[実行したいファイル]
 # テスト実行；
 # docker run -it --rm --name ruby  -v "$PWD":/usr/src/myapp -w /usr/src/myapp ruby:3.0 ruby test/rgb_test.rb[実行したいファイル]
-# docker run -it --rm --name ruby  -v "$PWD":/usr/src/myapp -w /usr/src/myapp ruby:3.0 ruby script/regep_checker.rb
+# docker run -it --rm --name ruby  -v "$PWD":/usr/src/myapp -w /usr/src/myapp ruby:3.0 ruby test/log_formatter_test.rb
+
 # docker run -it --rm --name ruby ruby script/regep_checker.rb
 
 # imageの確認
